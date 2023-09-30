@@ -1,0 +1,1244 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pygeoweaver &#8212; Use Case Template</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pygeoweaver’s Architecture" href="architecture.html" />
+    <link rel="prev" title="Motivation" href="motivation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/GeoSMART_logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Use Case Template</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://geo-smart.github.io/index.html">
+   Geosmart Website
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">
+   Project Pythia Foundations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapter One
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="motivation.html">
+   Motivation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapter Two
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pygeoweaver
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapter Three
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="architecture.html">
+   Pygeoweaver’s Architecture
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapter Four
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="swe.html">
+   SWE Workflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapter Five
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="future_contributions.html">
+   Future Developments and Community Contributions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapter Six
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Conclusion
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/geo-smart/use_case_template/main?urlpath=lab/tree/book/chapters/pygeoweaver.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/geo-smart/use_case_template"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/geo-smart/use_case_template/issues/new?title=Issue%20on%20page%20%2Fchapters/pygeoweaver.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/geo-smart/use_case_template/edit/main/book/chapters/pygeoweaver.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/pygeoweaver.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-pygeoweaver">
+   Setting up Pygeoweaver
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listing-existing-objects">
+     Listing Existing Objects
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-a-workflow">
+     Running a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exporting-a-workflow">
+     Exporting a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viewing-workflow-and-process-history">
+     Viewing Workflow and Process History
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-details">
+     Inspecting Details
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pygeoweaver</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-pygeoweaver">
+   Setting up Pygeoweaver
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listing-existing-objects">
+     Listing Existing Objects
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-a-workflow">
+     Running a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exporting-a-workflow">
+     Exporting a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viewing-workflow-and-process-history">
+     Viewing Workflow and Process History
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-details">
+     Inspecting Details
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="pygeoweaver">
+<h1>Pygeoweaver<a class="headerlink" href="#pygeoweaver" title="Permalink to this headline">#</a></h1>
+<p>Before diving deeper into Pygeoweaver, it’s crucial to establish an foundational understanding of Geoweaver. It provides a user-centric, GUI-based platform for orchestrating complex research processes. Its significance lies in its ability to streamline workflow creation, foster collaboration, and enhance the overall research experience.</p>
+<p>Pygeoweaver serves as a crucial bridge between the Java-based Geoweaver and the Python ecosystem. Pygeoweaver is a python binding designed to enhance its compatibility and usability within the Python environment. Pygeoweaver introduces new layers of functionality, making it particularly well-suited for integration with Jupyter Notebooks and Jupyter Hub.</p>
+<section id="setting-up-pygeoweaver">
+<h2>Setting up Pygeoweaver<a class="headerlink" href="#setting-up-pygeoweaver" title="Permalink to this headline">#</a></h2>
+<p>To begin using Pygeoweaver, you need to install it on your system. Pygeoweaver is available on the Python Package Index (PyPI), which means you can install it easily using pip.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pygeoweaver
+</pre></div>
+</div>
+<p>This command will install the latest version of Pygeoweaver and its dependencies on your machine. Make sure you have Python and pip installed and properly configured before running this command.</p>
+<p>Once Pygeoweaver is successfully installed, you can quickly embark on your journey with the following steps:
+Import Pygeoweaver Package: Begin by importing the Pygeoweaver package into your Python script or interactive session. This step is essential to access Pygeoweaver’s extensive functionalities.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygeoweaver</span>
+</pre></div>
+</div>
+<p>Before initiating the workflow execution, users need to start the Geoweaver server using the <code class="docutils literal notranslate"><span class="pre">pygeoweaver.start()</span></code> command. This command initiates the Geoweaver server, which acts as the backbone of our workflow execution. It handles the orchestration of tasks, data flow, and communication between different components of the workflow.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygeoweaver</span>
+<span class="n">pygeoweaver</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stop running Geoweaver if any..
+Check Java..
+Start Geoweaver..
+Success: Geoweaver is up
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create Processes: Pygeoweaver allows you to define and create processes seamlessly. The create_process function is your gateway to specifying essential details such as programming language, description, name, and most importantly, the code for your process. Here’s a concise example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">process</span> <span class="o">=</span> <span class="n">pygeoweaver</span><span class="o">.</span><span class="n">create_process</span><span class="p">(</span>
+    <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My first Pygeoweaver process&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Process 1&quot;</span><span class="p">,</span>
+    <span class="n">code</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        # Your process code here</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Exploring Pygeoweaver Functionalities: Pygeoweaver opens the door to a rich set of functionalities for managing geoweaver processes and workflows. This chapter’s later sections will delve into the specifics of working with Pygeoweaver, offering insights into the available classes and methods. For in-depth information, you can always refer to the API Reference.</p>
+<p>Pygeoweaver serves as a comprehensive toolkit for effectively managing geoweaver processes and workflows within the Python ecosystem. Let’s explore some key aspects of working with Pygeoweaver:</p>
+<p>Creating Processes: Pygeoweaver simplifies the process of defining and creating geoweaver processes. Using the create_process function, you can specify essential parameters like programming language, description, name, and, most importantly, the code that encapsulates your process logic. This functionality empowers researchers to encapsulate their scientific workflows within Python, enhancing flexibility and accessibility.</p>
+<p>Managing Workflows: Pygeoweaver takes workflow management to the next level. Researchers can effortlessly create and manipulate workflows by defining nodes and edges using the create_workflow function. This feature allows for the construction of workflows with specified dependencies among nodes, facilitating the orchestration of complex scientific processes.</p>
+<p>Interacting with Geoweaver: Pygeoweaver provides a range of functions and methods to seamlessly interact with Geoweaver instances. Researchers can add processes, workflows, and perform various geoweaver-related tasks with ease. This integration bridges the gap between Geoweaver’s capabilities and the Python ecosystem, ensuring a smooth workflow management experience. The table below shows the comparision of Pygeoweaver with other main stream libraries.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Pygeoweaver</p></th>
+<th class="head"><p>Argo</p></th>
+<th class="head"><p>Airflow</p></th>
+<th class="head"><p>Prefect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Streamlined Sharing and Collaboration</p></td>
+<td><p>Supports easy sharing and collaboration.</p></td>
+<td><p>Lacks streamlined sharing and collaboration.</p></td>
+<td><p>Lacks streamlined sharing and collaboration.</p></td>
+<td><p>Lacks streamlined sharing and collaboration.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Portable Workflows</p></td>
+<td><p>Creates portable workflow zip files.</p></td>
+<td><p>Does not support portable workflows.</p></td>
+<td><p>Does not support portable workflows.</p></td>
+<td><p>Does not support portable workflows.</p></td>
+</tr>
+<tr class="row-even"><td><p>Comprehensive Metadata</p></td>
+<td><p>Provides comprehensive metadata management.</p></td>
+<td><p>Does not provide comprehensive metadata.</p></td>
+<td><p>Does not provide comprehensive metadata.</p></td>
+<td><p>Does not provide comprehensive metadata.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Streamlined Deployment</p></td>
+<td><p>Simplifies workflow deployment.</p></td>
+<td><p>Limited streamlined deployment.</p></td>
+<td><p>Does not offer streamlined deployment.</p></td>
+<td><p>Does not offer streamlined deployment.</p></td>
+</tr>
+<tr class="row-even"><td><p>Graphical Workflow Editor</p></td>
+<td><p>Offers a graphical workflow editor.</p></td>
+<td><p>Does not provide a graphical editor.</p></td>
+<td><p>Does not provide a graphical editor.</p></td>
+<td><p>Does not provide a graphical editor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Automatic History Recording</p></td>
+<td><p>Automatically records workflow history.</p></td>
+<td><p>Does not automatically record history.</p></td>
+<td><p>Does not automatically record history.</p></td>
+<td><p>Does not automatically record history.</p></td>
+</tr>
+<tr class="row-even"><td><p>Enhanced Reproducibility and Transparency</p></td>
+<td><p>Enhances reproducibility and transparency.</p></td>
+<td><p>Does not offer equivalent enhancements.</p></td>
+<td><p>Does not offer equivalent enhancements.</p></td>
+<td><p>Does not offer equivalent enhancements.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Remote and Distributed Execution Capabilities</p></td>
+<td><p>Supports remote and distributed execution.</p></td>
+<td><p>Does not offer remote and distributed execution.</p></td>
+<td><p>Does not offer remote and distributed execution.</p></td>
+<td><p>Does not offer remote and distributed execution.</p></td>
+</tr>
+<tr class="row-even"><td><p>Workflow Monitoring and Alerting</p></td>
+<td><p>Supports workflow monitoring and alerting.</p></td>
+<td><p>Limited workflow monitoring and alerting.</p></td>
+<td><p>Offers workflow monitoring and alerting.</p></td>
+<td><p>Offers workflow monitoring and alerting.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Real-time Data Processing and Analysis</p></td>
+<td><p>Enables real-time data processing and analysis.</p></td>
+<td><p>Does not focus on real-time capabilities.</p></td>
+<td><p>Does not focus on real-time capabilities.</p></td>
+<td><p>Does not focus on real-time capabilities.</p></td>
+</tr>
+<tr class="row-even"><td><p>In-browser Workflow Composition and Execution</p></td>
+<td><p>Allows in-browser workflow composition and execution.</p></td>
+<td><p>Does not provide in-browser composition.</p></td>
+<td><p>Does not provide in-browser composition.</p></td>
+<td><p>Does not provide in-browser composition.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interactive Visualization and Analysis Tools</p></td>
+<td><p>Supports interactive visualization and analysis tools.</p></td>
+<td><p>Does not emphasize this aspect.</p></td>
+<td><p>Does not emphasize this aspect.</p></td>
+<td><p>Does not emphasize this aspect.</p></td>
+</tr>
+<tr class="row-even"><td><p>Collaborative Workspace for Workflow Development</p></td>
+<td><p>Offers a collaborative workspace.</p></td>
+<td><p>Does not have a built-in collaborative workspace.</p></td>
+<td><p>Does not have a built-in collaborative workspace.</p></td>
+<td><p>Does not have a built-in collaborative workspace.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Multi-platform Support (Local, Cloud, Distributed)</p></td>
+<td><p>Provides multi-platform support.</p></td>
+<td><p>Lacks support for multiple platforms.</p></td>
+<td><p>Offers support for multiple platforms.</p></td>
+<td><p>Offers support for multiple platforms.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<section id="listing-existing-objects">
+<h3>Listing Existing Objects<a class="headerlink" href="#listing-existing-objects" title="Permalink to this headline">#</a></h3>
+<p>To list the existing hosts, processes, and workflows, execute the respective commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygeoweaver</span> <span class="k">as</span> <span class="nn">geoweaver</span>
+<span class="n">geoweaver</span><span class="o">.</span><span class="n">list_hosts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+----------------------+-----------------+------+--------------+
+| Host Id | Hostname             | IP              | Port | Username     |
++---------+----------------------+-----------------+------+--------------+
+| 2c9z4s  | Local                |                 |      | -            |
+| 100001  | Localhost            | 127.0.0.1       | 22   | publicuser   |
+| 3yvozx  | New Host             |                 |      | -            |
+| jf7wuu  | Remote               | 129.174.131.229 | 22   | chetana      |
+| njqmil  | local@ssh-debug-only | 10.151.168.175  | 22   | gokulprathin |
++---------+----------------------+-----------------+------+--------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">list_processes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------------+-------------------------------------+----------+-------------+
+| Process Id | Name                                | Language | Description |
++------------+-------------------------------------+----------+-------------+
+| 8orlpp     | sample bash                         | shell    | shell       |
+| rfgoeg     | current_dir                         | python   | -           |
+| de8djk     | sample-bash                         | shell    | shell       |
+| 78vedq     | data_sentinel2                      | python   | -           |
+| mxpyqt     | model_creation_lstm                 | python   | python      |
+| c2xkhz     | model_creation_rf                   | python   | -           |
+| rauqsh     | model_creation_ghostnet             | python   | python      |
+| mi3e5n     | model_comparison                    | python   | -           |
+| u7xh2p     | data_integration                    | python   | -           |
+| 2wkl6e     | service_deployment                  | python   | python      |
+| i2fynz     | service_prediction                  | python   | -           |
+| e8k4wq     | model_train_validate                | python   | -           |
+| h1qp9v     | model_predict                       | python   | -           |
+| urd0nk     | data_terrainFeatures                | python   | -           |
+| 525l8q     | data_gee_modis_station_only         | python   | -           |
+| 7temiv     | data_gee_sentinel1_station_only     | python   | -           |
+| rmxece     | data_associate_station_grid_cell    | python   | -           |
+| illwc1     | data_gee_modis_real_time            | python   | -           |
+| sjs5by     | data_gee_sentinel1_real_time        | python   | -           |
+| y7nb46     | base_hole                           | python   | -           |
+| a8p3n7     | data_gee_gridmet_station_only       | python   | -           |
+| smsdr0     | data_gee_gridmet_real_time          | python   | -           |
+| 4i0sop     | model_creation_xgboost              | python   | -           |
+| b63prf     | testing_data_integration            | python   | -           |
+| zh38b6     | snowcast_utils                      | python   | -           |
+| wdh394     | model_create_kehan                  | python   | -           |
+| p87wh1     | data_snotel_real_time               | python   | -           |
+| ilbqzg     | all_dependencies                    | python   | -           |
+| do86ae     | data_WUS_UCLA_SR                    | python   | python      |
+| gkhtc0     | data_nsidc_4km_swe                  | python   | -           |
+| lbd6cp     | model_creation_et                   | python   | python      |
+| 8ovvln     | data_nsidc_4km_swe_testing          | python   | -           |
+| 6z5it4     | install_dependencies                | python   | -           |
+| 2l4pid     | interpreter-exec                    | python   | python      |
+| vzrekq     | plot_utilities                      | python   | -           |
+| 2u9n3d     | subglacial_topography_plot          | python   | -           |
+| oikovr     | gridded_topography_plot             | python   | -           |
+| r5qlro     | normal_score_transformation         | python   | -           |
+| hyf9o1     | transformed_data_plot               | python   | python      |
+| a9jrs1     | isotropic_experimental_variogram    | python   | -           |
+| 8hyi80     | anisotropoic_experimental_variogram | python   | -           |
+| 0qutu4     | plot_test                           | jupyter  | jupyter     |
+| 8sv3o6     | gridmet_region_selection_download   | python   | python      |
+| 11iolq     | gridmet_modis                       | python   | -           |
+| oof81y     | ml_post_processing                  | python   | python      |
+| drd3i0     | data_terrain_imagery                | python   | -           |
+| wttkvt     | earth_data_utils                    | python   | -           |
+| yvo1ds     | search_data                         | python   | -           |
+| cgvhiy     | earth_access_authenticate           | python   | -           |
+| v2ow93     | connect_harmony_client              | python   | -           |
+| 1b4ko0     | s3_file_storage                     | python   | -           |
+| 2a8mok     | install_deps                        | shell    | -           |
+| yzcazu     | ss                                  | python   | python      |
+| 6o3cn2     | test_py                             | python   | python      |
+| 3waubo     | test_py                             | python   | python      |
+| 0jaaet     | test_py                             | python   | python      |
+| bs1l0r     | sea_level_utils                     | python   | -           |
+| qeb9yn     | xarray_earth_access                 | python   | -           |
+| x7coy2     | plot_global_avg_sea_level           | python   | -           |
+| xrgiau     | test11                              | builtin  | builtin     |
+| ru79i2     | install_packages                    | shell    | shell       |
+| br9etb     | data_snotel_station_only            | python   | -           |
+| chvu4m     | model_train_validate_gan            | python   | python      |
+| doinnd     | model_creation_pycaret              | python   | -           |
+| b7a4fu     | model_creation_autokeras            | python   | -           |
+| gnpbdq     | model_creation_autopytorch          | python   | -           |
+| gjw7fq     | test_process                        | python   | -           |
+| 7tbppd     | test1                               | python   | python      |
++------------+-------------------------------------+----------+-------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">list_workflows</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----------------------+--------------------------------------------------------+
+| Workflow Id          | Name                                                   |
++----------------------+--------------------------------------------------------+
+| ejthsf0nkll1ccdvvssg | test new                                               |
+| grlgu9mkbry3qe8qxdg1 | tada                                                   |
+| cvpim3alkvboyj8b8mvq | new flow                                               |
+| lgiycwwzwkbmgff5377i | foo                                                    |
+| 96tqhttgag3b6wbi1fgb | Analyzing Sea Level Rise Using Earth Data in the Cloud |
+| kr2novmm4i9i27z5adyj | earth_data_cloud_clinic                                |
+| gr3yir8dynuvvrwp39ox | snowcast_wormhole                                      |
++----------------------+--------------------------------------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="running-a-workflow">
+<h3>Running a workflow<a class="headerlink" href="#running-a-workflow" title="Permalink to this headline">#</a></h3>
+<p>To execute a workflow, use the following command:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">run_workflow</span><span class="p">(</span><span class="s2">&quot;workflow_id&quot;</span><span class="p">,</span> <span class="s2">&quot;host_id_list&quot;</span><span class="p">,</span> <span class="s2">&quot;password_list&quot;</span><span class="p">,</span> <span class="s2">&quot;environment_list&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exporting-a-workflow">
+<h3>Exporting a workflow<a class="headerlink" href="#exporting-a-workflow" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">export_workflow</span><span class="p">(</span><span class="s2">&quot;workflow_id&quot;</span><span class="p">,</span> <span class="s2">&quot;workflow_zip_save_path&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example usage:</span>
+<span class="n">geoweaver</span><span class="o">.</span><span class="n">export_workflow</span><span class="p">(</span><span class="n">workflow_id</span><span class="o">=</span><span class="s2">&quot;lgiycwwzwkbmgff5377i&quot;</span><span class="p">,</span> <span class="n">target_file_path</span><span class="o">=</span><span class="s2">&quot;/Users/gokulprathin/foo.zip&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Workflow lgiycwwzwkbmgff5377i has been exported to file: /Users/gokulprathin/foo.zip
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="viewing-workflow-and-process-history">
+<h3>Viewing Workflow and Process History<a class="headerlink" href="#viewing-workflow-and-process-history" title="Permalink to this headline">#</a></h3>
+<p>To retrieve the history of a workflow run or a process run, use the respective commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">get_process_history</span><span class="p">(</span><span class="s2">&quot;8orlpp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>history_id</th>
+      <th>history_input</th>
+      <th>history_output</th>
+      <th>history_begin_time</th>
+      <th>history_end_time</th>
+      <th>history_notes</th>
+      <th>history_process</th>
+      <th>host_id</th>
+      <th>indicator</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>wi00o8l4c5e1t30x4e</td>
+      <td>#!/bin/bash\necho "Something"\n</td>
+      <td>None</td>
+      <td>2023-04-15 20:59:16.550</td>
+      <td>NaT</td>
+      <td>None</td>
+      <td>8orlpp</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bvlsm8ptaa4</td>
+      <td>#!/bin/bash\necho "Something"\n</td>
+      <td>Something\n</td>
+      <td>2023-01-24 14:14:50.818</td>
+      <td>2023-01-24 14:14:52.001999872</td>
+      <td>None</td>
+      <td>8orlpp</td>
+      <td>100001</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4wmbvq3h231</td>
+      <td>#!/bin/bash\necho "Something"\n</td>
+      <td>Something\n</td>
+      <td>2023-01-24 14:13:56.558</td>
+      <td>2023-01-24 14:13:57.636000000</td>
+      <td>None</td>
+      <td>8orlpp</td>
+      <td>100001</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>idhm0ul9jru</td>
+      <td>#!/bin/bash\necho "Something"\n</td>
+      <td>Something\n</td>
+      <td>2023-01-24 14:13:38.255</td>
+      <td>2023-01-24 14:13:39.491000064</td>
+      <td>None</td>
+      <td>8orlpp</td>
+      <td>100001</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>gl6n1dp0zn4</td>
+      <td>#!/bin/bash\necho "Something"\n</td>
+      <td>Something\n</td>
+      <td>2023-01-24 13:45:56.714</td>
+      <td>2023-01-24 13:45:58.206000128</td>
+      <td>None</td>
+      <td>8orlpp</td>
+      <td>100001</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">get_workflow_history</span><span class="p">(</span><span class="s2">&quot;gr3yir8dynuvvrwp39ox&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>history_id</th>
+      <th>history_input</th>
+      <th>history_output</th>
+      <th>history_begin_time</th>
+      <th>history_end_time</th>
+      <th>history_notes</th>
+      <th>history_process</th>
+      <th>host_id</th>
+      <th>indicator</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>dzIRhBkrze5LcUkQ2l</td>
+      <td>78vedq-gHIhY;mxpyqt-56igl;c2xkhz-1awEG;rauqsh-...</td>
+      <td>qol9tn93egl;bc1qivistlf;bs601qc9fpe;zx9f8kzkl6...</td>
+      <td>2023-06-23 19:01:06.659</td>
+      <td>2023-06-23 19:08:33.480999936</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>100001;</td>
+      <td>Failed</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>QcCz7Fi2lDqGYlzIYn</td>
+      <td>78vedq-gHIhY;mxpyqt-56igl;c2xkhz-1awEG;rauqsh-...</td>
+      <td>nj5gdqjtjxu;h9f2a1l0m5l;nx3ydlj0dsd;kwqgf66jhq...</td>
+      <td>2023-03-21 23:52:23.702</td>
+      <td>2023-03-21 23:52:43.340999936</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>jf7wuu;</td>
+      <td>Failed</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>jx7Lw1MFAeJmnKZRE0</td>
+      <td>78vedq-gHIhY;mxpyqt-56igl;c2xkhz-1awEG;rauqsh-...</td>
+      <td>2sln6vyx3sv;fummyrfzyn4;y2xz41kppu5;iuiy6j0qv2...</td>
+      <td>2023-03-20 17:16:24.699</td>
+      <td>2023-03-20 17:16:46.910000128</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>jf7wuu;</td>
+      <td>Failed</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>KxBZmK3OJL35e1gaoR</td>
+      <td>78vedq-gHIhY;mxpyqt-56igl;c2xkhz-1awEG;rauqsh-...</td>
+      <td>p7lyyk6nip9;9dco8jii41b;xeb5sawn70z;bbm9vfpaq9...</td>
+      <td>2023-03-11 01:10:28.000</td>
+      <td>2023-03-11 01:20:58.169999872</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>45wlwr;</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>X1nbc4mHEqFOUo6vst</td>
+      <td>78vedq-gHIhY;mxpyqt-56igl;c2xkhz-1awEG;rauqsh-...</td>
+      <td>uoptj1n8d2j;rkek46m5cah;2ejwpdbgcm6;475fj1ptvb...</td>
+      <td>2023-03-09 02:50:14.059</td>
+      <td>2023-03-09 02:59:53.595000064</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>45wlwr;</td>
+      <td>Failed</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>mKmqjIYwokwzDFEM9k</td>
+      <td>78vedq-gHIhY;mxpyqt-56igl;c2xkhz-1awEG;rauqsh-...</td>
+      <td>mfqyx4ighe3;886ud6vxi5e;7hl7avwis4f;5azrtox1ie...</td>
+      <td>2022-02-27 15:57:11.558</td>
+      <td>2022-02-27 15:57:26.839000064</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>je29f6;</td>
+      <td>Failed</td>
+    </tr>
+    <tr>
+      <th>177</th>
+      <td>d9fdVN65f61Az20q2P</td>
+      <td>m3bqdb-14o4Q;78vedq-gHIhY;ob2m37-8uXG0;mxpyqt-...</td>
+      <td>uu5p8yh6nzr;elgnuc41vhg;mmbv9ncyhh9;bu0t929z1a...</td>
+      <td>2022-01-23 22:44:11.651</td>
+      <td>2022-01-23 22:44:28.759000064</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>100001;</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>178</th>
+      <td>NdPqAUoc9ZkSJl92rR</td>
+      <td>m3bqdb-14o4Q;78vedq-gHIhY;ob2m37-8uXG0;mxpyqt-...</td>
+      <td>eg6kd34wb1k;f7b7s0f1f9p;od9rc01ue7l;jkyzrgyhus...</td>
+      <td>2022-01-23 20:29:30.439</td>
+      <td>2022-01-23 20:29:43.156000000</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>100001;</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>179</th>
+      <td>eOBbCeyVG77RaLUswZ</td>
+      <td>m3bqdb-14o4Q;78vedq-gHIhY;ob2m37-8uXG0;mxpyqt-...</td>
+      <td>jvwqpcqy8q3;1vgeg97ui9a;xr1fhfu14sm;3evg0ldmi5...</td>
+      <td>2022-01-17 21:33:44.480</td>
+      <td>2022-01-17 21:33:53.708999936</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>100001;</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <th>180</th>
+      <td>NhRJaMJLo0ge8K6cmn</td>
+      <td>m3bqdb-14o4Q;78vedq-gHIhY;ob2m37-8uXG0;mxpyqt-...</td>
+      <td>od39bpxjsp4;b6wvr2arn6t;sz0cab4cf02;vuwfyp6evr...</td>
+      <td>2022-01-17 21:24:31.951</td>
+      <td>2022-01-17 21:24:45.028999936</td>
+      <td>None</td>
+      <td>gr3yir8dynuvvrwp39ox</td>
+      <td>100001;</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+<p>181 rows × 9 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="inspecting-details">
+<h3>Inspecting Details<a class="headerlink" href="#inspecting-details" title="Permalink to this headline">#</a></h3>
+<p>To view details of a process, use the following command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">detail_process</span><span class="p">(</span><span class="s2">&quot;rfgoeg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+------------+--------------+---------------------+------------------+---------------+--------------------------+
+| Process Id | Process Name | Process Description | Process Language | Process Owner | Process is Confidential? |
++------------+--------------+---------------------+------------------+---------------+--------------------------+
+| rfgoeg     | current_dir  | -                   | python           | 111111        | FALSE                    |
++------------+--------------+---------------------+------------------+---------------+--------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p>To view details of a workflow, use the following command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoweaver</span><span class="o">.</span><span class="n">detail_workflow</span><span class="p">(</span><span class="s2">&quot;gr3yir8dynuvvrwp39ox&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WorkflowId: gr3yir8dynuvvrwp39ox
++----------------------+-------------------+-------------------------------------------------------------------------------------------------+--------+---------------+
+| Workflow Id          | Name              | Description                                                                                     | Owner  | Confidential? |
++----------------------+-------------------+-------------------------------------------------------------------------------------------------+--------+---------------+
+| gr3yir8dynuvvrwp39ox | snowcast_wormhole | The complete workflow for snowcast workflow creation, train, test, validation, deploy, predict. | 111111 | FALSE         |
++----------------------+-------------------+-------------------------------------------------------------------------------------------------+--------+---------------+
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h2>
+<p>For detailed documentation and examples, please visit the PyGeoWeaver Documentation [<a class="reference external" href="https://pygeoweaver.readthedocs.io/">https://pygeoweaver.readthedocs.io/</a>)</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="motivation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Motivation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="architecture.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pygeoweaver’s Architecture</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By eScience Institute, University of Washington<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
